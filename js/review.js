@@ -1,8 +1,8 @@
 const mockData = {
-    1: { id: 1, title: 'Avengers', type: 'Movie', genre: 'Action', year: '2012', image: 'https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=500&q=80', description: 'Earth\'s mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.', duration: '2h 50m', rating: 4.5, totalReviews: 1205 },
-    2: { id: 2, title: 'Batman', type: 'Movie', genre: 'Action', year: '2022', image: 'https://images.unsplash.com/photo-1620336655055-088d06e36bf0?w=500&q=80', description: 'When the Riddler, a sadistic serial killer, begins murdering key political figures in Gotham, Batman is forced to investigate the city\'s hidden corruption.', duration: '2h 20m', rating: 4.2, totalReviews: 854 },
-    3: { id: 3, title: 'The Great Gatsby', type: 'Book', genre: 'Classic Fiction', year: '1925', image: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500&q=80', description: 'A story of the wealthy Jay Gatsby and his obsessive love for the beautiful but married Daisy Buchanan during the Roaring Twenties.', duration: '218 pages', rating: 4.7, totalReviews: 3250 },
-    4: { id: 4, title: 'Abbey Road', type: 'Music', genre: 'Rock', year: '1969', image: 'https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?w=500&q=80', description: 'The eleventh studio album by the English rock band the Beatles, featuring iconic tracks and legendary production quality.', duration: '47m 20s', rating: 4.9, totalReviews: 5400 }
+    1: { id: 1, title: 'Avengers', type: 'Movie', genre: 'Action', year: '2012', image: 'https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=500&q=80', description: 'Earth\'s mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.', length: '2h 50m', rating: 4.5, totalReviews: 1205 },
+    2: { id: 2, title: 'Batman', type: 'Movie', genre: 'Action', year: '2022', image: 'https://images.unsplash.com/photo-1620336655055-088d06e36bf0?w=500&q=80', description: 'When the Riddler, a sadistic serial killer, begins murdering key political figures in Gotham, Batman is forced to investigate the city\'s hidden corruption.', length: '2h 20m', rating: 4.2, totalReviews: 854 },
+    3: { id: 3, title: 'The Great Gatsby', type: 'Book', genre: 'Classic Fiction', year: '1925', image: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=500&q=80', description: 'A story of the wealthy Jay Gatsby and his obsessive love for the beautiful but married Daisy Buchanan during the Roaring Twenties.', length: '218 pages', rating: 4.7, totalReviews: 3250 },
+    4: { id: 4, title: 'Abbey Road', type: 'Music', genre: 'Rock', year: '1969', image: 'https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?w=500&q=80', description: 'The eleventh studio album by the English rock band the Beatles, featuring iconic tracks and legendary production quality.', length: '47m 20s', rating: 4.9, totalReviews: 5400 }
 };
 // Store current reviews (this acts like your database for now)
 let currentReviews = [
@@ -35,7 +35,7 @@ function renderItemDetails(item) {
             <div class="mb-2">
                 <span class="badge badge-type mb-3">${typeLabel}</span>
                 <h1 class="mb-2 fw-bold" style="font-size: 2.2rem;">${item.title}</h1>
-                <p class="text-muted mb-4">${item.year} &nbsp;&middot;&nbsp; ${item.genre} &nbsp;&middot;&nbsp; <i class="bi ${item.type === 'Book' ? 'bi-book' : item.type === 'Music' ? 'bi-music-note-beamed' : 'bi-clock'}"></i> ${item.duration}</p>
+                <p class="text-muted mb-4">${item.year} &nbsp;&middot;&nbsp; ${item.genre} &nbsp;&middot;&nbsp; <i class="bi ${item.type === 'Book' ? 'bi-book' : item.type === 'Music' ? 'bi-music-note-beamed' : 'bi-clock'}"></i> ${item.length}</p>
                 <p class="text-light mb-4 lh-lg">${item.description}</p>
                 <div class="d-flex align-items-center gap-2 star-rating">
                     ${starsHtml}
