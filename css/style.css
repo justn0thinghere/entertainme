@@ -74,7 +74,7 @@ body {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
+    border-radius: 16px;
 }
 .item-poster {
     width: 100%;
@@ -154,7 +154,7 @@ body {
     font-weight: normal;
 }
 
-.review-text-muted {
+.text-muted {
     color: #cbd5e1 !important;
 }
 
